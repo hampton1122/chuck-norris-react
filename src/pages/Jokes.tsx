@@ -10,7 +10,7 @@ const Jokes: FC<any> = (): ReactElement => {
     useEffect(() => {
         doLoading(true)
         const fetchData = async () => {
-            const result = await axios("http://api.icndb.com/jokes/random/1?escape=javascript&limitTo=[nerdy]")
+            const result = await axios("https://api.icndb.com/jokes/random/1?escape=javascript&limitTo=[nerdy]")
             if (result.data)
                 setJokes(result.data.value[0].joke)
             doLoading(false)
